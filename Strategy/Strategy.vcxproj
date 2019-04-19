@@ -89,9 +89,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Judge.cpp" />
+    <ClCompile Include="MTCS.cpp" />
+    <ClCompile Include="Status.cpp" />
     <ClCompile Include="Strategy.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MTCS.h" />
+    <ClInclude Include="Status.h" />
     <ClInclude Include="Judge.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Strategy.h" />

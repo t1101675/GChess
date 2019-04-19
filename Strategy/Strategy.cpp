@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Point.h"
 #include "Strategy.h"
+#include "Status.h"
+#include "MTCS.h"
 
 using namespace std;
 
@@ -44,18 +46,11 @@ extern "C" __declspec(dllexport) Point* getPoint(const int M, const int N, const
 		该部分对参数使用没有限制，为了方便实现，你可以定义自己新的类、.h文件、.cpp文件
 	*/
 	//Add your own code below
-	/*
      //a naive example
-	for (int i = N-1; i >= 0; i--) {
-		if (top[i] > 0) {
-			x = top[i] - 1;
-			y = i;
-			break;
-		}
-	}
-    */
-	
-	
+	Status status(M, N, top, board, lastX, lastY, noX, noY);
+	Point np = status.getNextStep();
+	x = np.x;
+	y = np.y;
 	/*
 		不要更改这段代码
 	*/
